@@ -62,7 +62,13 @@ public class PasswordGeneratorService(IRandomProvider randomProvider) : IPasswor
         {
             password.Append(allChars[randomProvider.GetRandomInt(0, allChars.Length)]);
         }
-        
-        return new string(password.ToString().OrderBy(c => randomProvider.GetRandomInt(0, options.Length)).ToArray());
+
+        var passwordChars = password.ToString().ToCharArray();
+        for (int i = passwordChars.Length - 1; i > 0; i--)
+        {
+            int j = randomProvider.GetRandomInt(0, i + 1);
+            (passwordChars[i], passwordChars[j]) = (passwordChars[j], passwordChars[i]);
+        }
+        return new string(passwordChars);
     }
 }
