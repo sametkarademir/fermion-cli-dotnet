@@ -4,6 +4,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{1E19DF1D-533
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.Core", "src\Fermion.DevCli.Core\Fermion.DevCli.Core.csproj", "{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.Commands.Password", "src\Fermion.DevCli.Commands.Password\Fermion.DevCli.Commands.Password.csproj", "{D0CF57AD-2C57-4AAE-8781-2F07E33C434C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.App", "src\Fermion.DevCli.App\Fermion.DevCli.App.csproj", "{F5100EDD-6E23-47AC-ABB1-659A33728903}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -11,11 +15,21 @@ Global
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
+		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
+		{F5100EDD-6E23-47AC-ABB1-659A33728903} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
