@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <OutputType>Exe</OutputType>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+
+        <PackAsTool>true</PackAsTool>
+        <ToolCommandName>devcli</ToolCommandName>
+        <PackageId>Fermion.DevCli</PackageId>
+        <Version>0.0.1</Version>
+        <Authors>SametKarademir</Authors>
+        <Description>DevCli</Description>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Content Include="Resources\**\*.*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+            <PackagePath>contentFiles\any\any\Resources\</PackagePath>
+            <PackageCopyToOutput>true</PackageCopyToOutput>
+            <BuildAction>Content</BuildAction>
+            <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+        </Content>
+    </ItemGroup>
+    
+    <ItemGroup>
+      <ProjectReference Include="..\Fermion.DevCli.Commands.Password\Fermion.DevCli.Commands.Password.csproj" />
+      <ProjectReference Include="..\Fermion.DevCli.Core\Fermion.DevCli.Core.csproj" />
+    </ItemGroup>
+
+</Project>
