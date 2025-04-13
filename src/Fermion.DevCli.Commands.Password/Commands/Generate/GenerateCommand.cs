@@ -17,14 +17,14 @@ public class GenerateCommand(IPasswordGeneratorService passwordService) : BaseCo
             aliases: new[] { "--length", "-l" },
             description: "The length of the password",
             getDefaultValue: () => 16);
-        
+
         lengthOption.AddValidator(result =>
         {
             if (result.GetValueForOption(lengthOption) < 4)
             {
                 result.ErrorMessage = "Password length must be at least 4 characters";
             }
-            
+
             if (result.GetValueForOption(lengthOption) > 128)
             {
                 result.ErrorMessage = "Password length must be at most 128 characters";
@@ -62,7 +62,7 @@ public class GenerateCommand(IPasswordGeneratorService passwordService) : BaseCo
             {
                 result.ErrorMessage = "Number of passwords to generate must be at least 1";
             }
-            
+
             if (result.GetValueForOption(countOption) > 100)
             {
                 result.ErrorMessage = "Number of passwords to generate must be at most 100";

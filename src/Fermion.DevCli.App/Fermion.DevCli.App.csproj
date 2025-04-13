@@ -9,7 +9,7 @@
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>devcli</ToolCommandName>
         <PackageId>Fermion.DevCli</PackageId>
-        <Version>0.0.1</Version>
+        <Version>0.0.2</Version>
         <Authors>SametKarademir</Authors>
         <Description>DevCli</Description>
     </PropertyGroup>
@@ -25,6 +25,7 @@
     </ItemGroup>
     
     <ItemGroup>
+      <ProjectReference Include="..\Fermion.DevCli.Commands.Nuget\Fermion.DevCli.Commands.Nuget.csproj" />
       <ProjectReference Include="..\Fermion.DevCli.Commands.Password\Fermion.DevCli.Commands.Password.csproj" />
       <ProjectReference Include="..\Fermion.DevCli.Core\Fermion.DevCli.Core.csproj" />
     </ItemGroup>

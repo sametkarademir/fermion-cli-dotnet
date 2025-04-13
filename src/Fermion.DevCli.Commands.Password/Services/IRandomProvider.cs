@@ -20,7 +20,7 @@ public interface IRandomProvider
     /// This method uses a cryptographically secure random number generator to produce a random integer.
     /// </remarks>
     int GetRandomInt(int minInclusive, int maxExclusive);
-    
+
     /// <summary>
     /// Generates a random byte array of the specified length.
     ///</summary>
@@ -40,16 +40,16 @@ public class RandomProvider : IRandomProvider, IDisposable
     {
         if (minInclusive >= maxExclusive)
         {
-            throw new ArgumentOutOfRangeException(nameof(minInclusive), 
+            throw new ArgumentOutOfRangeException(nameof(minInclusive),
                 $"The minimum value must be less than the maximum value. Min: [{minInclusive}], Max: [{maxExclusive}]");
         }
-        
+
         var buffer = new byte[4];
         _rng.GetBytes(buffer);
-        
+
         var randomInt = BitConverter.ToInt32(buffer, 0);
         var result = Math.Abs(randomInt == int.MinValue ? randomInt + 1 : randomInt);
-            
+
         return minInclusive + result % (maxExclusive - minInclusive);
     }
 
@@ -57,7 +57,7 @@ public class RandomProvider : IRandomProvider, IDisposable
     {
         if (length <= 0)
         {
-            throw new ArgumentOutOfRangeException(nameof(length), 
+            throw new ArgumentOutOfRangeException(nameof(length),
                 "The length must be a positive integer.");
         }
 
