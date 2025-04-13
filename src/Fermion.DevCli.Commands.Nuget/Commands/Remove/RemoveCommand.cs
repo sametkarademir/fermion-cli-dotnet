@@ -14,9 +14,9 @@ public class RemoveCommand(INugetService nugetService) : BaseCommand
         var command = new Command(Name, Description);
         var nameArgument = new Argument<string>("name", "NuGet API source name");
         command.AddArgument(nameArgument);
-        command.SetHandler((name) =>
+        command.SetHandler(async (name) =>
         {
-            nugetService.RemoveTokenAsync(name).GetAwaiter();
+            await nugetService.RemoveTokenAsync(name);
         }, nameArgument);
 
         return command;

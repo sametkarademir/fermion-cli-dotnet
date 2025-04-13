@@ -12,9 +12,9 @@ public class ListCommand(INugetService nugetService) : BaseCommand
     public override Command Configure()
     {
         var command = new Command(Name, Description);
-        command.SetHandler(() =>
+        command.SetHandler(async () =>
         {
-            nugetService.GetListAsync().GetAwaiter();
+            await nugetService.GetListAsync();
         });
         return command;
     }

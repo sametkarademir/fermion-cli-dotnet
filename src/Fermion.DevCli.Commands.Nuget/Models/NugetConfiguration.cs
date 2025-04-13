@@ -9,5 +9,5 @@ public class Source
 {
     public string Url { get; set; } = string.Empty;
     public string Token { get; set; } = string.Empty;
-    public string? Descripiton { get; set; }
+    public string? Description { get; set; }
 }

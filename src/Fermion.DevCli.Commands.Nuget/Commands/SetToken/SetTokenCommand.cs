@@ -28,10 +28,10 @@ public class SetTokenCommand(INugetService nugetService) : BaseCommand
         command.AddArgument(tokenArgument);
         command.AddOption(sourceOption);
         command.AddOption(descriptionOption);
-        command.SetHandler((name, token, source, description) =>
-            {
-                nugetService.SetTokenAsync(name, token, source, description).GetAwaiter();
-            }, nameArgument, tokenArgument, sourceOption, descriptionOption);
+        command.SetHandler(async (name, token, source, description) =>
+        {
+            await nugetService.SetTokenAsync(name, token, source, description);
+        }, nameArgument, tokenArgument, sourceOption, descriptionOption);
         return command;
     }
 }

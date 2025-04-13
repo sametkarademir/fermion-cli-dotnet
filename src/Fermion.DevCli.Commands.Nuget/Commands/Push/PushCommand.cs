@@ -17,10 +17,10 @@ public class PushCommand(INugetService nugetService) : BaseCommand
         command.AddArgument(nameArgument);
         command.AddArgument(pathArgument);
         command.SetHandler(
-            (name, path) =>
-            {
-                nugetService.PushPackage(path, name).GetAwaiter();
-            }, nameArgument, pathArgument);
+             async (name, path) =>
+             {
+                 await nugetService.PushPackage(path, name);
+             }, nameArgument, pathArgument);
         return command;
     }
 }

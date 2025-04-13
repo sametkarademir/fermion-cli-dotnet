@@ -65,7 +65,7 @@ public class NugetService : INugetService
         var i = 1;
         foreach (var kvp in nugetConfiguration.NuGet)
         {
-            ConsoleWriteExtensions.PrintMessage($"Source {i}: \n\t * Name: {kvp.Key} \n\t * Source: {kvp.Value.Url}, \n\t * Token: {kvp.Value.Token} \n\t * Description: {kvp.Value.Descripiton}");
+            ConsoleWriteExtensions.PrintMessage($"Source {i}: \n\t * Name: {kvp.Key} \n\t * Source: {kvp.Value.Url}, \n\t * Token: {kvp.Value.Token} \n\t * Description: {kvp.Value.Description}");
             i++;
         }
         await Task.CompletedTask;
@@ -79,11 +79,11 @@ public class NugetService : INugetService
         {
             nugetConfiguration.NuGet[nameKey].Token = token;
             nugetConfiguration.NuGet[nameKey].Url = source;
-            nugetConfiguration.NuGet[nameKey].Descripiton = description;
+            nugetConfiguration.NuGet[nameKey].Description = description;
         }
         else
         {
-            nugetConfiguration.NuGet.Add(nameKey, new Source { Url = source, Token = token, Descripiton = description });
+            nugetConfiguration.NuGet.Add(nameKey, new Source { Url = source, Token = token, Description = description });
         }
         SaveConfig(nugetConfiguration);
         ConsoleWriteExtensions.PrintMessage("Saved NuGet token successfully!", MessageType.Success);
@@ -145,7 +145,7 @@ public class NugetService : INugetService
         if (process.ExitCode == 0)
         {
             ConsoleWriteExtensions.PrintMessage("NuGet package pushed successfully!", MessageType.Success);
-            ConsoleWriteExtensions.PrintMessage(output, MessageType.Info);
+            ConsoleWriteExtensions.PrintMessage(output);
         }
         else
         {
