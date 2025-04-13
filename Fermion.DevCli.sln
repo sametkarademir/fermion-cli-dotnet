@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.Commands.Pas
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.App", "src\Fermion.DevCli.App\Fermion.DevCli.App.csproj", "{F5100EDD-6E23-47AC-ABB1-659A33728903}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fermion.DevCli.Commands.Nuget", "src\Fermion.DevCli.Commands.Nuget\Fermion.DevCli.Commands.Nuget.csproj", "{E13CF33E-6019-40A3-8DED-F94CE9D59B2C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -17,6 +19,7 @@ Global
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
 		{D0CF57AD-2C57-4AAE-8781-2F07E33C434C} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
 		{F5100EDD-6E23-47AC-ABB1-659A33728903} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
+		{E13CF33E-6019-40A3-8DED-F94CE9D59B2C} = {1E19DF1D-5338-401C-AA3C-F90EC8CAD1DD}
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{BF8FB714-A3C1-4298-9FB1-505FF0800CB4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
@@ -31,5 +34,9 @@ Global
 		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F5100EDD-6E23-47AC-ABB1-659A33728903}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E13CF33E-6019-40A3-8DED-F94CE9D59B2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E13CF33E-6019-40A3-8DED-F94CE9D59B2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E13CF33E-6019-40A3-8DED-F94CE9D59B2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E13CF33E-6019-40A3-8DED-F94CE9D59B2C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

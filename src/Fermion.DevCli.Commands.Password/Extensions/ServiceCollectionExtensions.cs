@@ -14,7 +14,7 @@ public static class ServiceCollectionExtensions
         //Services
         services.AddSingleton<IPasswordGeneratorService, PasswordGeneratorService>();
         services.AddSingleton<IRandomProvider, RandomProvider>();
-        
+
         //Commands
         services.AddSingleton<PasswordCommand>();
         services.AddSingleton<GenerateCommand>();
@@ -22,7 +22,7 @@ public static class ServiceCollectionExtensions
 
         return services;
     }
-    
+
     public static RootCommand AddPasswordCommand(this RootCommand rootCommand, IServiceProvider serviceProvider)
     {
         var passwordCommand = serviceProvider.GetRequiredService<PasswordCommand>();

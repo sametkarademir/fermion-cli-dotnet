@@ -13,10 +13,10 @@ public class PasswordCommand(GenerateCommand generateCommand, LengthCommand leng
     public override Command Configure()
     {
         var command = new Command(Name, Description);
-        
+
         command.AddCommand(generateCommand.Configure());
         command.AddCommand(lengthCommand.Configure());
-            
+
         return command;
     }
 }

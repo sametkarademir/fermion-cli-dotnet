@@ -29,7 +29,7 @@ public class LengthCommand : BaseCommand
                 result.ErrorMessage = "Password cannot be empty";
                 return;
             }
-            
+
             if (token.Value.Contains(" ") && !(token.Value.StartsWith("\"") && token.Value.EndsWith("\"")))
             {
                 result.ErrorMessage = "Passwords containing spaces must be entered in quotes. Example: \"my password\"";

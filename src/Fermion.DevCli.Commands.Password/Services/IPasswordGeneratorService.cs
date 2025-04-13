@@ -37,7 +37,7 @@ public class PasswordGeneratorService(IRandomProvider randomProvider) : IPasswor
 
         if (options.Length <= 0)
             throw new ArgumentException("Password length must be a positive number.", nameof(options.Length));
-        
+
         if (!options.IncludeUppercase && !options.IncludeLowercase &&
             !options.IncludeNumbers && !options.IncludeSpecialCharacters)
         {
@@ -49,15 +49,15 @@ public class PasswordGeneratorService(IRandomProvider randomProvider) : IPasswor
         if (options.IncludeLowercase) charSets.Add(LowercaseChars);
         if (options.IncludeNumbers) charSets.Add(NumberChars);
         if (options.IncludeSpecialCharacters) charSets.Add(SpecialChars);
-        
+
         string allChars = string.Join("", charSets);
-        
+
         var password = new StringBuilder();
         foreach (var charSet in charSets)
         {
             password.Append(charSet[randomProvider.GetRandomInt(0, charSet.Length)]);
         }
-        
+
         for (int i = password.Length; i < options.Length; i++)
         {
             password.Append(allChars[randomProvider.GetRandomInt(0, allChars.Length)]);
