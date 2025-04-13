@@ -9,7 +9,7 @@
         <PackAsTool>true</PackAsTool>
         <ToolCommandName>devcli</ToolCommandName>
         <PackageId>Fermion.DevCli</PackageId>
-        <Version>0.0.2</Version>
+        <Version>0.0.3</Version>
         <Authors>SametKarademir</Authors>
         <Description>DevCli</Description>
     </PropertyGroup>
